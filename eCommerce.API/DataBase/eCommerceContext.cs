@@ -47,6 +47,56 @@ namespace eCommerce.API.DataBase
                 new Departamento { Id = 28, Nome = "Produtos para Jardim" }
             );
 
+            modelBuilder.Entity<Usuario>().HasData(
+                new Usuario
+                {
+                    Id = 1,
+                    Nome = "Mateus",
+                    Email = "email@email.com",
+                    Sexo = "Masculino",
+                    RG = "123456789",
+                    CPF = "12345678901",
+                    NomeMae = "Maria",
+                    NomePai = "José",
+                    SituacaoCadastro = "Ativo",
+                    DataCadastro = DateTimeOffset.Now,
+                    Contato = new Contato
+                    {
+                        Id = 1,
+                        Telefone = "123456789",
+                        Celular = "987654321"
+                    },
+                    EnderecosEntrega = new List<EnderecoEntrega>
+                    {
+                        new EnderecoEntrega
+                        {
+                            Id = 1,
+                            UsuarioId = 1,
+                            Endereco = "Rua A",
+                            Numero = "123",
+                            Complemento = "Apto 1",
+                            Bairro = "Centro",
+                            Cidade = "São Paulo",
+                            Estado = "SP",
+                            CEP = "12345678"
+                        }
+                    },
+                    Departamentos = new List<Departamento>
+                    {
+                        new Departamento
+                        {
+                            Id = 1,
+                            Nome = "Informática"
+                        },
+                        new Departamento
+                        {
+                            Id = 2,
+                            Nome = "Celular"
+                        }
+                    }
+                }
+            );
+
         }
 
         #region Conexão sem distinção de ambientes de execução
