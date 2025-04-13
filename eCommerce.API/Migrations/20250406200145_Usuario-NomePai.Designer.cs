@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eCommerce.API.DataBase;
 
@@ -11,9 +12,11 @@ using eCommerce.API.DataBase;
 namespace eCommerce.API.Migrations
 {
     [DbContext(typeof(eCommerceContext))]
-    partial class eCommerceContextModelSnapshot : ModelSnapshot
+    [Migration("20250406200145_Usuario-NomePai")]
+    partial class UsuarioNomePai
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,148 +80,6 @@ namespace eCommerce.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departamentos");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Nome = "Informática"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Nome = "Celular"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Nome = "Eletrodomésticos"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Nome = "Móveis"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Nome = "Brinquedos"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Nome = "Roupas"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Nome = "Calçados"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Nome = "Esportes"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Nome = "Beleza"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Nome = "Saúde"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Nome = "Livros"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Nome = "Games"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Nome = "Automotivo"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Nome = "Casa e Jardim"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Nome = "Pet Shop"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Nome = "Relógios"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Nome = "Instrumentos Musicais"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Nome = "Ferramentas"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Nome = "Artigos para Festas"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Nome = "Artigos de Papelaria"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Nome = "Produtos Naturais"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Nome = "Produtos Orgânicos"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            Nome = "Produtos para Bebês"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            Nome = "Produtos para Crianças"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            Nome = "Produtos para Idosos"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            Nome = "Produtos para Animais"
-                        },
-                        new
-                        {
-                            Id = 27,
-                            Nome = "Produtos para Casa"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Nome = "Produtos para Jardim"
-                        });
                 });
 
             modelBuilder.Entity("eCommerce.Models.EnderecoEntrega", b =>
